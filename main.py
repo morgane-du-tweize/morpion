@@ -11,4 +11,14 @@ def nom_joueur():
     print("")
     return nom
 
+def choix_symbole():
+    print("choisissez un symbole : 1 pour X, 2 pour O")
+    symboles = ["X", "O"]
+    nombre = input()
+    while not str(nombre).isnumeric() or int(nombre) not in (1, 2):
+        print("veuillez renter un nombre égal à 1 ou 2")
+        nombre = input()
+    nombre = int(nombre)
+    return symboles[nombre-1]
+
 print("Bienvenue au jeu du Morpion !")
